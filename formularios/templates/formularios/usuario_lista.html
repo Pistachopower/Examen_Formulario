@@ -1,0 +1,25 @@
+{% extends "estructura/principal.html" %}
+
+
+{% block contenido %}
+
+
+<ul>
+    <h4>Usuarios</h1>
+	{% for usuario in usuario_lista %}
+    	<li>Nombre: {{ usuario.nombre }}</li>
+          <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">Editar</label><br>
+
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">Eliminar</label><br>
+        <br>
+	{% empty %}
+
+<li>no hay informacion.</li>
+	{% endfor %}
+</ul>
+
+
+
+{% endblock %}
